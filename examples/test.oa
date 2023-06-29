@@ -1,0 +1,100 @@
+; Test file for OA, to check that it successfully compiles for you.
+
+; Template:
+; Expected output: 
+
+; VARIABLES
+
+dec test_dec 67.3
+; Expected output: 67.3
+io nlout test_dec
+
+strdec string "Test"
+; Expected output: Test
+io nlout string
+
+intdec num 25425
+; Expected output: 25425
+io nlout num
+
+chardec x 'x'
+; Expected output: x
+io nlout x
+
+floatdec float_num 57.4f
+; Expected output: 57.4
+io nlout float_num
+
+doubledec double_num 852.42
+; Expected output: 852.42
+io nlout double_num
+
+booldec winning FALSE
+; Expected output: false
+io nlout winning
+
+; Should be double
+mov double_num test_dec_2
+; Expected output: 852.42
+io nlout test_dec_2
+
+strdec str_test "a"
+cat str_test "b"
+cat str_test "c"
+; Expected output: abc
+io nlout str_test
+
+; MATH
+
+dec add_num 6
+add add_num 5
+; Expected output: 11
+io nlout add_num
+
+dec sub_num 5
+sub sub_num 3
+; Expected output: 2
+io nlout sub_num
+
+dec mul_num 5
+mul mul_num 6
+; Expected output: 30
+io nlout mul_num
+
+dec div_num 21
+div div_num 7
+; Expected output: 3
+io nlout div_num
+
+dec mod_num 6
+mod mod_num 6
+; Expected output: 0
+io nlout mod_num
+
+dec mod_num_2 8
+mod mod_num_2 5
+; Expected output: 3
+io nlout mod_num_2
+
+io out ">>"
+io out SPACE
+io in input
+; Expected output: What the user types
+io nlout input
+
+; Expected output:
+; 67.3
+; Test
+; 25425
+; x
+; 57.4
+; 852.42
+; false OR 0
+; 852.42
+; abc
+; 11
+; 2
+; 30
+; 3
+; 0
+; What the user types

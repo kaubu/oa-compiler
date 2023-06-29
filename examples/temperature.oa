@@ -1,0 +1,16 @@
+; >= 1.2.0
+io out "Please enter your temperature in either celcius or fahrenheit: "
+io in old_in_temp
+dconv old_in_temp in_temp
+
+mov in_temp f ; Fahrenheit
+mov in_temp c ; Celcius
+
+mul f 1.8
+add f 32.0
+
+sub c 32.0
+mul c 0.5556
+
+io nlout in_temp << " deg f to celcius: " << c
+io nlout in_temp << " deg c to fahrenheit: " << f

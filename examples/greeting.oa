@@ -1,0 +1,3 @@
+; 2-line input/output Greeting ; ver >= v1.3.0
+io input "Hello, what is your name? "
+io nlout "Welcome, " << DEF << "."

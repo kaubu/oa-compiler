@@ -1,0 +1,18 @@
+; v1.2.0 or above
+io nlout "Welcome!"
+
+io out "Please enter your base: "
+io in in_base
+dconv in_base base
+
+io out "Please enter your exponent: "
+io in in_exp
+dconv in_exp exp
+
+def result
+dpow base exp ; base^exp, which is then stored in result
+
+io out "Result: "
+io nlout result
+
+; io nlout "Result: " << result ; This is a hacky way of doing it, which will input itself into the C++ code
